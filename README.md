@@ -1,6 +1,6 @@
 # WoW Forever Addon Manager
 
-A tiny, single-file addon manager for **World of Warcraft: Forever** on Windows. It installs and updates addons from CurseForge.
+A tiny, single-file addon manager for **World of Warcraft: Forever** on Windows. It installs and updates addons from CurseForge. Just download the pyw file above and you're good to go.
 
 ![WoW Forever Addon Manager showing three installed addons, all up to date](docs/images/app.png)
 
