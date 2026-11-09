@@ -502,7 +502,7 @@ def run_ui():
     b_install = ttk.Button(bot, text="⬇ Install", command=lambda: do_install())
     b_install.grid(row=1, column=2)
     bot.columnconfigure(0, weight=1)
-    Tip(e_pid, "The 'Project ID' number in the About box on the addon's CurseForge page")
+    Tip(e_pid, "The 'Project ID' number in the Details box on the addon's CurseForge page")
 
     def on_link_change(*_):  # known addon? fill in its Project ID
         try:
@@ -604,7 +604,7 @@ def run_ui():
             return fail(ex)
         pid_text = pid_var.get().strip()
         if not pid_text.isdigit():
-            return fail("Enter the addon's Project ID (number from the About box on its CurseForge page).")
+            return fail("Enter the addon's Project ID (number in the Details box on its CurseForge page).")
         pid = int(pid_text)
 
         def resolved(meta, err):

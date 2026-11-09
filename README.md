@@ -31,14 +31,42 @@ pythonw addon_manager.pyw
 ```
 On first run it looks for `_forever_\Interface\AddOns` in common install locations. If it doesn't find it, it asks you to pick the folder and remembers your choice in `addons.json`.
 
+![First-run prompt asking for the WoW Forever AddOns folder](docs/images/first-run.png)
+
 To get a double-click launcher:
 1. Create a Windows shortcut with target `pythonw.exe "C:\path\to\addon_manager.pyw"`.
 2. Optionally, give it `Wow.exe` as its icon.
 
-## Why the Project ID?
-CurseForge's addon pages sit behind bot protection, so a script can't look up an addon's numeric ID from its name, and this tool doesn't try to get around that. The ID is shown in the **About Project** box on every addon page (Questie, for example, is `334372`). You only enter it once per addon; updates are automatic after that.
+## Usage
+
+### 1. Copy a link from CurseForge
+Copy the addon page link to install the newest Forever release. To install one exact file, right-click its download button on the **Files** tab and copy that link instead.
+
+![Which CurseForge links to copy: the page address, or a file's download button](docs/images/curseforge-links.png)
+
+### 2. Find the Project ID
+The **Project ID** is in the **Details** box on every addon page (Questie's is `334372`). You only enter it once per addon; updates are automatic after that.
 
 ![Where to find the Project ID on a CurseForge addon page](docs/images/curseforge-project-id.png)
+
+**Why it's needed:** CurseForge's addon pages sit behind bot protection, so a script can't look up an addon's numeric ID from its name, and this tool doesn't try to get around that.
+
+### 3. Install
+Paste both values and click **⬇ Install**. When the install finishes, Explorer opens with the new addon folder selected.
+
+![Installing Details: link and Project ID filled in, download in progress](docs/images/installing.png)
+
+### Updates
+Updates are checked on every launch, or when you press **⟳**. Any addon with an update shows its new version in orange with an **⬆** button next to it; **⇪** updates them all.
+
+![Questie v12.6.3 installed, with v12.6.4 available and an update button](docs/images/update-available.png)
+
+### Staying in sync with the folder
+- **Deleted by hand:** dropped from the register on the next launch.
+- **Partly deleted:** marked *(incomplete)*, with **⬆** to reinstall it.
+- **Folders without a CurseForge ID:** listed as untracked, and otherwise left alone.
+
+![An incomplete addon with a reinstall button, and two untracked folders](docs/images/incomplete-untracked.png)
 
 ## Tests
 ```bash
