@@ -2,6 +2,8 @@
 
 A tiny, single-file addon manager for **World of Warcraft: Forever** on Windows. It installs and updates addons from CurseForge.
 
+![WoW Forever Addon Manager showing three installed addons, all up to date](docs/images/app.png)
+
 - **One Python file, no dependencies:** it uses only the standard library (tkinter, urllib, zipfile).
 - **Nothing left running:** there's no server or background service and no listening sockets. Closing the window ends the process.
 - **Outbound HTTPS to CurseForge only:** connections are allowed only to `www.curseforge.com`, `edge.forgecdn.net` and `mediafilez.forgecdn.net`. Every redirect is checked against that list.
@@ -35,6 +37,8 @@ To get a double-click launcher:
 
 ## Why the Project ID?
 CurseForge's addon pages sit behind bot protection, so a script can't look up an addon's numeric ID from its name, and this tool doesn't try to get around that. The ID is shown in the **About Project** box on every addon page (Questie, for example, is `334372`). You only enter it once per addon; updates are automatic after that.
+
+![Where to find the Project ID on a CurseForge addon page](docs/images/curseforge-project-id.png)
 
 ## Tests
 ```bash
