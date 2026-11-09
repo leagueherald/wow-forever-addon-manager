@@ -1,0 +1,12 @@
+# Personal register of installed addons (created on first run)
+addons.json
+addons.tmp
+
+# Local shortcuts contain machine-specific paths
+*.lnk
+
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/
+.idea/
